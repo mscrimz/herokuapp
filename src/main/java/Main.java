@@ -58,7 +58,7 @@ public class Main {
       }
     }, new FreeMarkerEngine());
 
-      get("/hello", (req, res) -> {
+    get("/hello", (req, res) -> {
       RelativisticModel.select();
       Amount<Mass> m = Amount.valueOf("12 GeV").to(KILOGRAM);
       return "E=mc^2: 12 GeV = " + m.toString();
